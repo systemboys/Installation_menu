@@ -123,6 +123,38 @@ case $option in
         echo -e "${verde}│ ${piscando}${negrito}Menu deletado com sucesso!${reset} ${verde}│${reset}"
         echo -e "${verde}╰────────────────────────────╯${reset}"
         ;;
+    udl) # Update (atualizar pacotes do Linux)
+        clear
+        # Start of commands
+        echo -e "${amarelo}╭───────────────────────────────╮${reset}"
+        echo -e "${amarelo}│ ${piscando}${negrito}Atualizando os pacotes Linux!${reset} ${amarelo}│${reset}"
+        echo -e "${amarelo}╰───────────────────────────────╯${reset}"
+        sleep ${sleep}
+        apt update
+        clear
+        # End of commands
+        echo -e "${verde}╭────────────────────────────────────────╮${reset}"
+        echo -e "${verde}│ ${negrito}Pacotes Linux atualizados com sucesso!${reset} ${verde}│${reset}"
+        echo -e "${verde}╰────────────────────────────────────────╯${reset}"
+        sleep ${sleep}
+        ./${fileName}
+        ;;
+    ugl) # Upgrade (atualizar o Kernel do Linux)
+        clear
+        # Start of commands
+        echo -e "${amarelo}╭────────────────────────────────╮${reset}"
+        echo -e "${amarelo}│ ${piscando}${negrito}Atualizando o Kernel do Linux!${reset} ${amarelo}│${reset}"
+        echo -e "${amarelo}╰────────────────────────────────╯${reset}"
+        sleep ${sleep}
+        apt upgrade -y
+        clear
+        # End of commands
+        echo -e "${verde}╭──────────────────────────────────────────╮${reset}"
+        echo -e "${verde}│ ${negrito}Kernel do Linux atualizados com sucesso!${reset} ${verde}│${reset}"
+        echo -e "${verde}╰──────────────────────────────────────────╯${reset}"
+        sleep ${sleep}
+        ./${fileName}
+        ;;
     0) # Recarregar menu
         clear
         ./${fileName}
