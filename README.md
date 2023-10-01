@@ -24,12 +24,6 @@ Nosso Menu de Facilidades é uma ferramenta poderosa e intuitiva projetada para 
    git clone git remote add origin https://github.com/systemboys/Installation_menu.git
    ```
 
-   > Ou você pode ir direto ao ponto, execute o seuinte comando no seu terminal Linux:
-   > ```bash
-   > git clone https://github.com/systemboys/Installation_menu.git && cd Installation_menu && chmod +x GTi_Support.sh && ./GTi_Support.sh
-   > ```
-   > **( ! )** Sertifique-se de que o `Git` esteja instalado em seu Linux!
-
 2. **Navegue e Execute:** Navegue até o diretório do menu e execute os comandos diretamente do terminal. É tão simples quanto isso!
 
    ```
@@ -37,6 +31,12 @@ Nosso Menu de Facilidades é uma ferramenta poderosa e intuitiva projetada para 
    chmod +x GTi_Support.sh
    ./GTi_Support.sh
    ```
+
+   > Ou você pode ir direto ao ponto, execute o seuinte comando no seu terminal Linux:
+   > ```bash
+   > git clone https://github.com/systemboys/Installation_menu.git && cd Installation_menu && chmod +x GTi_Support.sh && ./GTi_Support.sh
+   > ```
+   > **( ! )** Sertifique-se de que o `Git` esteja instalado em seu Linux!
 
 3. **Explore e Instale:** Explore as categorias, escolha os pacotes que deseja instalar e siga as instruções. Em poucos instantes, você terá os programas desejados em seu sistema Linux.
 
