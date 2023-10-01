@@ -52,7 +52,7 @@ echo -e "│${fundoAmarelo}     ${negrito}${italico}GLOBAL TEC Informática - A 
 echo -e "╰─────────────────────────────────────────────────────────────────────────╯ ${verde}GLOBAL TEC Informática${reset}"
 echo -e "╭┤${fundoVermelho}${negrito}${italico} Menu ${reset}├────────────────────────────────┬┤${fundoVermelho}${negrito}${italico} Linux ${reset}├───────────────────────╮    ${verde}A Tecnologia da${reset}"
 echo -e "│ ${ciano}0 ► Recarregar menu${reset} ░ ${amarelo}q ► Sair do Menu${reset} │ ${vermelho}r ► Reiniciar${reset} ░ ${vermelho}s ► Desligar${reset}   │ ${verde}informação é o Futuro.${reset}"
-echo -e "│ ${verde}udm ► Atualiza menu${reset} ░ dm ► ${vermelho}Delete Menu${reset} │ ${verde}udl ► Update${reset}  ░ ${verde}ugl ► Upgrade${reset}  │    ${verde}www.gti1.com.br${reset}"
+echo -e "│ ${verde}udm ► Atualiza menu${reset} ░ ${vermelho}dm ► Delete Menu${reset} │ ${verde}udl ► Update${reset}  ░ ${verde}ugl ► Upgrade${reset}  │    ${verde}www.gti1.com.br${reset}"
 echo -e "╰────────────────────────────────────────┴────────────────────────────────╯"
 echo -e "${verde}╭┤${fundoAzul}${negrito}${italico} Internet ${reset}${verde}├─────────────────────────────────────────────────────────────────────────────────────╮"
 echo -e "│ i1 ► AnyDesk          ░ i2 ► Microsoft Edge ░ i3 ► Google Chrome    ░ i4 ► Google Earth Pro     │"
