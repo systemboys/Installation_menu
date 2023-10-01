@@ -97,7 +97,10 @@ case $option in
         echo -e "${vermelho}│ ${piscando}${negrito}Atualizando o Menu...${reset} ${vermelho}│${reset}"
         echo -e "${vermelho}╰───────────────────────╯${reset}"
         sleep ${sleep}
-        git clone https://github.com/systemboys/Installation_menu.git && cd Installation_menu && chmod +x GTi_Support.sh && ./GTi_Support.sh
+        git clone https://github.com/systemboys/Installation_menu.git
+        cd Installation_menu
+        chmod +x GTi_Support.sh
+        ./GTi_Support.sh
         ;;
     0) # Recarregar menu
         clear
