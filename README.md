@@ -28,7 +28,8 @@ Nosso Menu de Facilidades é uma ferramenta poderosa e intuitiva projetada para 
 
    ```
    cd Installation_menu
-   ./menu.sh
+   chmod +x GTi_Support.sh
+   ./GTi_Support.sh
    ```
 
 3. **Explore e Instale:** Explore as categorias, escolha os pacotes que deseja instalar e siga as instruções. Em poucos instantes, você terá os programas desejados em seu sistema Linux.
@@ -40,3 +41,5 @@ Este menu é um projeto de código aberto, e encorajamos contribuições da comu
 Com o Menu de Facilidades para Linux, queremos tornar a experiência de instalação de software no Linux tão simples e acessível quanto possível. Esperamos que você aproveite usar o menu tanto quanto nós gostamos de criá-lo!
 
 *Divirta-se instalando, configurando e explorando no Linux!* 🚀🐧
+
+> Marcos Aurélio Rocha da Silva | [https://www.gti1.com.br](https://www.gti1.com.br "Site em desenvolvimento") | systemboys@hotmail.com
