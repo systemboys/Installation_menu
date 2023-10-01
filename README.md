@@ -1,4 +1,4 @@
-**Bem-vindo ao Menu de Facilidades para Linux!**
+# **Bem-vindo ao Menu de Facilidades para Linux!**
 
 [![Menu de instalações de pacotes Linux](https://github.com/systemboys/Installation_menu/blob/main/images/Installation_menu.png?raw=true "Menu de instalações de pacotes Linux")](https://github.com/systemboys/Installation_menu/blob/main/images/Installation_menu.png?raw=true "Menu de instalações de pacotes Linux")
 
@@ -43,3 +43,51 @@ Com o Menu de Facilidades para Linux, queremos tornar a experiência de instala�
 *Divirta-se instalando, configurando e explorando no Linux!* 🚀🐧
 
 > Marcos Aurélio Rocha da Silva | [https://www.gti1.com.br](https://www.gti1.com.br "Site em desenvolvimento") | systemboys@hotmail.com
+
+---
+
+### Rascunho para novos itens
+
+Aqui você pode editar o arquivo caso necessário, adicionando mais recursos.
+
+```bash
+ ${roxo}░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓${reset}${vermelho}▒▓▓▓${reset}
+
+ ${amarelo}░▒▓▓▓      ░▒▓▓▓ ░▒▓▓▓${reset}
+ ${amarelo}░▒▓▓▓░▒▓▓▓ ░▒▓▓▓ ░▒▓▓▓${reset}
+ ${amarelo}░▒▓▓▓▓▓▓▓▓ ░▒▓▓▓ ░▒▓▓▓${reset}
+ ${verde}GLOBAL TEC Informática${reset}
+    ${verde}A Tecnologia da${reset}
+ ${verde}informação é o Futuro.${reset}
+    ${verde}www.gti1.com.br${reset}
+
+```
+
+### Incrementações de itens
+
+Baixe e edite seu arquivo.
+
+```bash
+    i7) # Opera
+        clear
+        # Start of commands
+        # Verificar se o Opera está instalado
+        if ! command -v opera &> /dev/null; then
+            echo "Opera não está instalado. Instalando..."
+            # apt install ????
+            echo -e "${negrito}${verde}╭──────────────────────────────╮"
+            echo -e "│ ${italico}Opera instalado com sucesso! │"
+            echo -e "╰──────────────────────────────╯${reset}"
+        else
+            echo -e "${negrito}${verde}╭──────────────────────────╮"
+            echo -e "│ ${italico}Opera já está instalado! │"
+            echo -e "╰──────────────────────────╯${reset}"
+        fi
+        # End of commands
+        #echo -e "${negrito}${verde}╭────────────────────────────────╮"
+        #echo -e "│ ${italico}Remmina instalado com sucesso! │"
+        #echo -e "╰────────────────────────────────╯${reset}"
+        sleep ${sleep}
+        ./${fileName}
+        ;;
+```
