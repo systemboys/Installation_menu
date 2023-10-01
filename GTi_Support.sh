@@ -51,7 +51,8 @@ echo -e "│ tornando a instalação de software uma tarefa rápida e direta.   
 echo -e "│${fundoAmarelo}     ${negrito}${italico}GLOBAL TEC Informática - A Tecnologia da Informação é o Futuro      ${reset}│ ${verde}GLOBAL TEC Informática${reset}"
 echo -e "╰─────────────────────────────────────────────────────────────────────────╯    ${verde}A Tecnologia da${reset}"
 echo -e "╭┤${fundoVermelho}${negrito}${italico} Menu ${reset}├────────────────────────────────┬┤${fundoVermelho}${negrito}${italico} Linux ${reset}├───────────────────────╮ ${verde}informação é o Futuro.${reset}"
-echo -e "│ 0 ► Recarregar menu ░ q ► Sair do Menu │ ${vermelho}r ► Reiniciar${reset} ░ ${vermelho}s ► Desligar${reset}   │    ${verde}www.gti1.com.br${reset}"
+echo -e "│ ${ciano}0 ► Recarregar menu${reset} ░ ${amarelo}q ► Sair do Menu${reset} │ ${vermelho}r ► Reiniciar${reset} ░ ${vermelho}s ► Desligar${reset}   │    ${verde}www.gti1.com.br${reset}"
+echo -e "│ ${verde}udm ► Atualiza menu${reset} ░ dm ► ${vermelho}Delete Menu${reset} │ ${verde}udl ► Update${reset}  ░ ${verde}ugl ► Upgrade${reset}  │"
 echo -e "╰────────────────────────────────────────┴────────────────────────────────╯"
 echo -e "${verde}╭┤${fundoAzul}${negrito}${italico} Internet ${reset}${verde}├─────────────────────────────────────────────────────────────────────────────────────╮"
 echo -e "│ i1 ► AnyDesk          ░ i2 ► Microsoft Edge ░ i3 ► Google Chrome    ░ i4 ► Google Earth Pro     │"
@@ -89,6 +90,28 @@ case $option in
         echo -e "${vermelho}╰───────────────────────╯${reset}"
         sleep ${sleep}
         sudo poweroff
+        ;;
+    udm) # Atualizar o menu
+        clear
+        echo -e "${vermelho}╭───────────────────────╮${reset}"
+        echo -e "${vermelho}│ ${piscando}${negrito}Atualizando o Menu...${reset} ${vermelho}│${reset}"
+        echo -e "${vermelho}╰───────────────────────╯${reset}"
+        sleep ${sleep}
+        # Verificar se existe o diretório
+        diretorio="/Installation_menu"
+        cd ..
+        if [ -d "$diretorio" ]; then
+            # Diretório B existe, executar o comando 1
+            echo "O Diretório ${$diretorio} já existe. Renomeando..."
+            mv Installation_menu Installation_menu_old
+        else
+            echo "O Diretório ${$diretorio} não existe. Clonando..."
+        fi
+        git clone https://github.com/systemboys/Installation_menu.git
+        rm -rf Installation_menu_old
+        cd Installation_menu
+        chmod +x GTi_Support.sh
+        ./GTi_Support.sh
         ;;
     0) # Recarregar menu
         clear
