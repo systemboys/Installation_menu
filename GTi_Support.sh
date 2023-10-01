@@ -97,21 +97,7 @@ case $option in
         echo -e "${vermelho}│ ${piscando}${negrito}Atualizando o Menu...${reset} ${vermelho}│${reset}"
         echo -e "${vermelho}╰───────────────────────╯${reset}"
         sleep ${sleep}
-        # Verificar se existe o diretório
-        diretorio="/Installation_menu"
-        cd ..
-        if [ -d "$diretorio" ]; then
-            # Diretório B existe, executar o comando 1
-            echo "O Diretório ${$diretorio} já existe. Renomeando..."
-            mv Installation_menu Installation_menu_old
-        else
-            echo "O Diretório ${$diretorio} não existe. Clonando..."
-        fi
-        git clone https://github.com/systemboys/Installation_menu.git
-        rm -rf Installation_menu_old
-        cd Installation_menu
-        chmod +x GTi_Support.sh
-        ./GTi_Support.sh
+        git clone https://github.com/systemboys/Installation_menu.git && cd Installation_menu && chmod +x GTi_Support.sh && ./GTi_Support.sh
         ;;
     0) # Recarregar menu
         clear
