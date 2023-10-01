@@ -146,7 +146,7 @@ case $option in
         echo -e "${amarelo}│ ${piscando}${negrito}Atualizando o Kernel do Linux!${reset} ${amarelo}│${reset}"
         echo -e "${amarelo}╰────────────────────────────────╯${reset}"
         sleep ${sleep}
-        apt upgrade -y
+        apt update && apt upgrade -y
         clear
         # End of commands
         echo -e "${verde}╭──────────────────────────────────────────╮${reset}"
