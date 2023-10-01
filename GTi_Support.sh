@@ -104,6 +104,7 @@ case $option in
         else
             echo "Git já está instalado. Ignorando a instalação."
         fi
+        cd ..
         git clone https://github.com/systemboys/Installation_menu.git
         cd Installation_menu
         chmod +x GTi_Support.sh
