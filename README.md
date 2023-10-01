@@ -1,5 +1,7 @@
 # **Bem-vindo ao Menu de Facilidades para Linux!**
 
+> **( ! )** Esse menu ainda está em desenvolvimento, algumas opções, as quais tem um esterisco (*), não estão funcionando ainda!
+
 [![Menu de instalações de pacotes Linux](https://github.com/systemboys/Installation_menu/blob/main/images/Installation_menu.png?raw=true "Menu de instalações de pacotes Linux")](https://github.com/systemboys/Installation_menu/blob/main/images/Installation_menu.png?raw=true "Menu de instalações de pacotes Linux")
 
 Nosso Menu de Facilidades é uma ferramenta poderosa e intuitiva projetada para simplificar o processo de instalação de uma variedade de pacotes Linux. Este menu foi cuidadosamente elaborado para oferecer aos usuários uma experiência sem complicações ao instalar programas, configurar ambientes de desenvolvimento e acessar uma gama diversificada de softwares.
