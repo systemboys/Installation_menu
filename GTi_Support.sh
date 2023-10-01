@@ -119,7 +119,7 @@ case $option in
         sleep ${sleep}
         rm -rf Installation_menu && clear
         echo -e "${verde}╭────────────────────────────╮${reset}"
-        echo -e "${verde}│ ${piscando}${negrito}Menu deletado com sucesso!${reset} ${vermelho}│${reset}"
+        echo -e "${verde}│ ${piscando}${negrito}Menu deletado com sucesso!${reset} ${verde}│${reset}"
         echo -e "${verde}╰────────────────────────────╯${reset}"
         ;;
     0) # Recarregar menu
