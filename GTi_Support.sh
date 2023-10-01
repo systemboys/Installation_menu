@@ -112,11 +112,12 @@ case $option in
         ;;
     dm) # Deletar o menu
         clear
+        cd ..
         echo -e "${vermelho}╭─────────────────────╮${reset}"
         echo -e "${vermelho}│ ${piscando}${negrito}Deletando o Menu...${reset} ${vermelho}│${reset}"
         echo -e "${vermelho}╰─────────────────────╯${reset}"
         sleep ${sleep}
-        cd .. && rm -rf Installation_menu && clear
+        rm -rf Installation_menu && clear
         echo -e "${verde}╭────────────────────────────╮${reset}"
         echo -e "${verde}│ ${piscando}${negrito}Menu deletado com sucesso!${reset} ${vermelho}│${reset}"
         echo -e "${verde}╰────────────────────────────╯${reset}"
