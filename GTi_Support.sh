@@ -97,6 +97,13 @@ case $option in
         echo -e "${vermelho}│ ${piscando}${negrito}Atualizando o Menu...${reset} ${vermelho}│${reset}"
         echo -e "${vermelho}╰───────────────────────╯${reset}"
         sleep ${sleep}
+        # Verificar se o Git está instalado
+        if ! command -v git &> /dev/null; then
+            echo "Git não está instalado. Instalando..."
+            sudo apt install git
+        else
+            echo "Git já está instalado. Ignorando a instalação."
+        fi
         git clone https://github.com/systemboys/Installation_menu.git
         cd Installation_menu
         chmod +x GTi_Support.sh
