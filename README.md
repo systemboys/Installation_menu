@@ -46,7 +46,7 @@ Com o Menu de Facilidades para Linux, queremos tornar a experiência de instala�
 
 ---
 
-### Rascunho para novos itens
+## Rascunho para novos itens
 
 Aqui você pode editar o arquivo caso necessário, adicionando mais recursos.
 
