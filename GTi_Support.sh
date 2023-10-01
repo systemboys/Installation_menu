@@ -449,6 +449,7 @@ case $option in
             echo -e "│ Git não está instalado! Instalando... │"
             echo -e "╰───────────────────────────────────────╯${reset}"
             sleep ${sleep}
+            sudo apt update
             sudo apt install git
             clear
             echo -e "${negrito}${verde}╭───────────────────────────╮"
