@@ -61,7 +61,7 @@ echo -e "│ i9 ► Discord          ░ i20 ► Moz. Firefox  ░ i21 ► Visua
 echo -e "╰─────────────────────────────────────────────────────────────────────────────────────────────────╯${reset}"
 echo -e "${amarelo}╭┤${fundoPreto}${negrito}${italico} Desenvolvimento ${reset}${amarelo}├──────────────────────────────────────────────────────────────────────────────╮"
 echo -e "│*d1 ► Beekeeper Studio ░*d2 ► Insommina        ░*d3 ► Visual Studio Code ░*d4 ► NodeJS           │"
-echo -e "│*d5 ► Docker Conteiner ░*d6 ► Git              ░                         ░                       │"
+echo -e "│*d5 ► Docker Conteiner ░ d6 ► Git              ░                         ░                       │"
 echo -e "╰─────────────────────────────────────────────────────────────────────────────────────────────────╯${reset}"
 
 read -p "${fileName}: Digite uma opção: " option
