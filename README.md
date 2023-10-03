@@ -124,7 +124,7 @@ packageVersionName="microsoft-edge" # Nome do arquivo na instalação para procu
 # Start of commands
 
 # Verificar se o está instalado
-if ! command -v anydesk &> /dev/null; then
+if ! command -v ${packageVersionName} &> /dev/null; then
     clear
     echo "╭${characters}────────────────────────────────────╮"
     echo "│ ${packageName} não está instalado! Instalando... │"

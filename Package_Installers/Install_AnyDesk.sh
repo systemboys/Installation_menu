@@ -10,14 +10,14 @@ sleep="$1"
 fileName="$2"
 
 # Variáveis úteis
-packageVersionName="microsoft-edge" # Nome do arquivo na instalação para procurar a versão no pacote
-       packageName="Microsoft Edge" # Apenas o nome do pacote
-        characters="──────────────" # Arquivo você coloca os (─), a mesma quantidade de caracteres do packageName=""
+packageVersionName="anydesk" # Nome do arquivo na instalação para procurar a versão no pacote
+       packageName="AnyDesk" # Apenas o nome do pacote
+        characters="───────" # Arquivo você coloca os (─), a mesma quantidade de caracteres do packageName=""
 
 # Start of commands
 
 # Verificar se o está instalado
-if ! command -v anydesk &> /dev/null; then
+if ! command -v ${packageVersionName} &> /dev/null; then
     clear
     echo "╭${characters}────────────────────────────────────╮"
     echo "│ ${packageName} não está instalado! Instalando... │"
