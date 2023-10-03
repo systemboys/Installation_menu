@@ -9,6 +9,8 @@ fi
 sleep="$1"
 fileName="$2"
 
+# Start of commands
+
 # Verificar se o AnyDesk está instalado
 if ! command -v anydesk &> /dev/null; then
     clear
@@ -38,6 +40,9 @@ else
     echo "│ AnyDesk já está instalado! Ignorando a instalação... │"
     echo "╰──────────────────────────────────────────────────────╯"
 fi
+
+# End of commands
+
 sleep ${sleep}
 cd ..
 ./${fileName}
