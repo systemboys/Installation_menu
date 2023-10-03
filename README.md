@@ -92,16 +92,16 @@ Aqui você pode editar o arquivo caso necessário, adicionando mais recursos.
 
 ### Incrementações de itens
 
-Para incrementar um novo item, edite o arquivo `./GTi_Support.sh` e adicione a nova verificação na condição `if ... fi`, no exemplo abaixo, o **AnyDesk** é o novo item incrementado:
+Para incrementar um novo item, edite o arquivo `./GTi_Support.sh` e adicione a nova verificação na condição `if ... fi`, no exemplo abaixo, o **Microsoft Edge** é o novo item incrementado:
 
 ```bash
-    i7) # AnyDesk
+    i7) # Microsoft Edge
         cd Package_Installers/
-        ./Install_AnyDesk.sh "$sleep" "$fileName"
+        ./Install_Microsoft_Edge.sh "$sleep" "$fileName"
         ;;
 ```
 
-Em seguida, crie um novo arquivo `./Package_Installers/Install_AnyDesk.sh` com o seguinte script:
+Em seguida, crie um novo arquivo `./Package_Installers/Install_Microsoft_Edge.sh` com o seguinte script:
 
 ```bash
 #!/bin/bash
