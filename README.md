@@ -125,17 +125,7 @@ if ! command -v anydesk &> /dev/null; then
     echo "│ AnyDesk não está instalado! Instalando... │"
     echo "╰───────────────────────────────────────────╯"
 
-    # Adicionar a chave GPG
-    wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
-
-    # Adicionar o repositório
-    echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list
-
-    # Atualizar os pacotes
-    sudo apt update
-
-    # Instalar o AnyDesk
-    sudo apt install anydesk
+    # Your installation command...
 
     clear
     echo "╭────────────────────────────────╮"

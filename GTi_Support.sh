@@ -165,41 +165,8 @@ case $option in
         ./Install_AnyDesk.sh "$sleep" "$fileName"
         ;;
     i2) # Microsoft Edge
-        clear
-        # Start of commands
-        # Adicionar o Repositóro
-        curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-        sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
-        sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-stable.list'
-
-        # Atualizar a Lista de Pacotes
-        sudo apt update
-
-        # Instalar o Microsoft Edge
-        sudo apt install microsoft-edge-stable -y
-
-        # Resolver dependências quebradas
-        if ! command -v microsoft-edge-stable &> /dev/null; then
-            apt-get install -f
-        fi
-
-        # Verificar se o Microsoft Edge para Linux está instalado
-        if ! command -v microsoft-edge-stable &> /dev/null; then
-            echo "╭─────────────────────────────────────────────────────────────────────────╮"
-            echo "│ ️️⚠️  Houve algum problema, O Microsoft Edge para Linux não foi instalado! │"
-            echo "╰─────────────────────────────────────────────────────────────────────────╯"
-        else
-            echo -e "${negrito}${verde}╭───────────────────────────────────────╮"
-            echo -e "│ ${italico}Microsoft Edge instalado com sucesso! │"
-            echo -e "╰───────────────────────────────────────╯${reset}"
-            microsoft-edge-stable --version
-        fi
-        # End of commands
-        #echo -e "${negrito}${verde}╭───────────────────────────────────────╮"
-        #echo -e "│ ${italico}Microsoft Edge instalado com sucesso! │"
-        #echo -e "╰───────────────────────────────────────╯${reset}"
-        sleep ${sleep}
-        ./${fileName}
+        cd Package_Installers/
+        ./Install_Microsoft_Edge.sh "$sleep" "$fileName"
         ;;
     i3) # Google Chrome
         clear
