@@ -23,7 +23,7 @@ Nosso Menu de Facilidades é uma ferramenta poderosa e intuitiva projetada para 
 1. **Clone o Repositório:** Clone nosso repositório do GitHub para ter acesso ao Menu de Facilidades para Linux.
 
    ```
-   git clone git remote add origin https://github.com/systemboys/Installation_menu.git
+   git clone https://github.com/systemboys/Installation_menu.git
    ```
 
 2. **Navegue e Execute:** Navegue até o diretório do menu e execute os comandos diretamente do terminal. É tão simples quanto isso!
