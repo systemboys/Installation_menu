@@ -151,3 +151,33 @@ cd ..
 ```
 
 > **( ! )** Obs.: Esse novo arquivo deve está dentro do diretório `./Package_Installers/`.
+
+**Ou apenas outros comandos qualquer**
+
+O exemplo a seguir, é para outros comandos sem verificações:
+
+```bash
+#!/bin/bash
+
+# Verifica se o número de argumentos é correto
+if [ "$#" -ne 2 ]; then
+    echo "Erro: Número incorreto de argumentos."
+    exit 1
+fi
+
+# Obtém os valores dos argumentos
+sleep="$1"
+fileName="$2"
+
+# Start of commands
+
+# Your Linux commands...
+
+# End of commands
+
+sleep ${sleep}
+cd ..
+./${fileName}
+```
+
+> **( ! )** Caso você desejar executar outros comandos que não tenha estrutura de controle como a anterior.
