@@ -105,6 +105,7 @@ Em seguida, crie um novo arquivo `./Package_Installers/Install_AnyDesk.sh` com o
 
 ```bash
 #!/bin/bash
+
 # Verifica se o número de argumentos é correto
 if [ "$#" -ne 2 ]; then
     echo "Erro: Número incorreto de argumentos."
