@@ -24,7 +24,14 @@ if ! command -v ${packageVersionName} &> /dev/null; then
     echo "│ ${packageName} não está instalado! Instalando... │"
     echo "╰${characters}────────────────────────────────────╯"
 
-    # Your installation command...
+    # Fazer download do pacote
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+    # Instalar o pacote
+    sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+    # Dar permissões e deletar o arquivo
+    chmod 777 google-chrome-stable_current_amd64.deb && rm -r google-chrome-stable_current_amd64.deb
 
     clear
     echo "╭${characters}─────────────────────────╮"
