@@ -161,36 +161,8 @@ case $option in
         ;;
     # Internet
     i1) # AnyDesk
-        clear
-        # Start of commands
-        # Adicionar a chave GPG
-        wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
-
-        # Adicionar o repositório
-        echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list
-
-        # Atualizar os pacotes
-        sudo apt update
-
-        # Instalar o AnyDesk
-        sudo apt install anydesk -y
-
-        # Verificar se o AnyDesk está instalado
-        if ! command -v anydesk &> /dev/null; then
-            echo "╭───────────────────────────────────────────────────────╮"
-            echo "│ ️️⚠️  Ocorreu algum problema, AnyDesk não foi instalado! │"
-            echo "╰───────────────────────────────────────────────────────╯"
-        else
-            echo -e "${negrito}${verde}╭────────────────────────────────╮"
-            echo -e "│ ${italico}AnyDesk instalado com sucesso! │"
-            echo -e "╰────────────────────────────────╯${reset}"
-        fi
-        # End of commands
-        #echo -e "${negrito}${verde}╭────────────────────────────────╮"
-        #echo -e "│ ${italico}AnyDesk instalado com sucesso! │"
-        #echo -e "╰────────────────────────────────╯${reset}"
-        sleep ${sleep}
-        ./${fileName}
+        cd Package_Installers/
+        ./Install_AnyDesk.sh "$sleep" "$fileName"
         ;;
     i2) # Microsoft Edge
         clear

@@ -54,6 +54,25 @@ Com o Menu de Facilidades para Linux, queremos tornar a experiência de instala�
 
 ---
 
+## Estrutura de arquivos
+
+Este Menu contêm scripts de instalação de pacotes de software dentro do diretório "/Installation_menu/". Estão armazenados vários arquivos.sh. Veja a estrutura de arquivos:
+
+```bash
+/Installation_menu
+├─ /Imagens
+│    └─ Installation_menu.png
+├─ /Package_Installers
+│    ├─ Install_Package1.sh
+│    ├─ Install_Package2.sh
+│    ├─ Install_Package3.sh
+│    └─ ...
+├─ GTi_Support.sh
+└─ README.md
+```
+
+Dentro do diretório "Package_Installers", você pode ter vários arquivos.sh, cada um responsável por instalar um pacote de software específico. Isso torna a estrutura do seu projeto organizada e fácil de entender.
+
 ## Rascunho para novos itens
 
 Aqui você pode editar o arquivo caso necessário, adicionando mais recursos.
