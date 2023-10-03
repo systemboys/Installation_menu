@@ -169,35 +169,8 @@ case $option in
         ./Install_Microsoft_Edge.sh "$sleep" "$fileName"
         ;;
     i3) # Google Chrome
-        clear
-        # Start of commands
-        # Fazer download do pacote
-        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-
-        # Instalar o pacote
-        sudo dpkg -i google-chrome-stable_current_amd64.deb
-
-        # Dar permissões e deletar o arquivo
-        chmod 777 google-chrome-stable_current_amd64.deb && rm -r google-chrome-stable_current_amd64.deb
-
-        # Verificar se o Google Chrome foi instalado
-        if ! command -v google-chrome-stable &> /dev/null; then
-            echo "╭─────────────────────────────────────────────────────────────╮"
-            echo "│ ️️⚠️  Ocorreu algum problema, Google Chrome não foi instalado! │"
-            echo "╰─────────────────────────────────────────────────────────────╯"
-        else
-            echo -e "${negrito}${verde}╭───────────────────────────────────────╮"
-            echo -e "│ ${italico}Microsoft Edge instalado com sucesso! │"
-            echo -e "╰───────────────────────────────────────╯${reset}"
-            # Verificar versão do Google chrome
-            google-chrome-stable --version
-        fi
-        # End of commands
-        #echo -e "${negrito}${verde}╭───────────────────────────────────────╮"
-        #echo -e "│ ${italico}Microsoft Edge instalado com sucesso! │"
-        #echo -e "╰───────────────────────────────────────╯${reset}"
-        sleep ${sleep}
-        ./${fileName}
+        cd Package_Installers/
+        ./Install_Google_Chrome.sh "$sleep" "$fileName"
         ;;
     i4) # Google Earth Pro
         clear
