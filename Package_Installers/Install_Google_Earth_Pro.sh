@@ -25,18 +25,18 @@ if ! [ -x "$(command -v google-earth-pro)" ]; then
     echo "╰${characters}────────────────────────────────────╯"
 
     # Baixar o pacote
-    # wget https://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
+    wget https://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
 
     # Instalar o pacote
-    # sudo dpkg -i google-earth-pro-stable_current_amd64.deb
+    sudo dpkg -i google-earth-pro-stable_current_amd64.deb
 
     # Dar permissões e apagar o arquivo
-    # chmod 777 google-earth-pro-stable_current_amd64.deb && rm -r google-earth-pro-stable_current_amd64.deb
+    chmod 777 google-earth-pro-stable_current_amd64.deb && rm -r google-earth-pro-stable_current_amd64.deb
 
     # clear
-    # echo "╭${characters}─────────────────────────╮"
-    # echo "│ ${packageName} instalado com sucesso! │"
-    # echo "╰${characters}─────────────────────────╯"
+    echo "╭${characters}─────────────────────────╮"
+    echo "│ ${packageName} instalado com sucesso! │"
+    echo "╰${characters}─────────────────────────╯"
 else
     clear
     echo "╭${characters}───────────────────────────────────────────────╮"
