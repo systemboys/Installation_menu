@@ -173,33 +173,8 @@ case $option in
         ./Install_Google_Chrome.sh "$sleep" "$fileName"
         ;;
     i4) # Google Earth Pro
-        clear
-        # Start of commands
-        # Baixar o pacote
-        wget https://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
-
-        # Instalar o pacote
-        sudo dpkg -i google-earth-pro-stable_current_amd64.deb
-
-        # Dar permissões e apagar o arquivo
-        chmod 777 google-earth-pro-stable_current_amd64.deb && rm -r google-earth-pro-stable_current_amd64.deb
-
-        # Verificar se o Google Chrome foi instalado
-        if dpkg -1 | grep -q "google-earth-pro"; then
-            echo "╭────────────────────────────────────────────────────────────────╮"
-            echo "│ ️️⚠️  Ocorreu algum problema, Google Earth Pro não foi instalado! │"
-            echo "╰────────────────────────────────────────────────────────────────╯"
-        else
-            echo -e "${negrito}${verde}╭─────────────────────────────────────────╮"
-            echo -e "│ ${italico}Google Earth Pro instalado com sucesso! │"
-            echo -e "╰─────────────────────────────────────────╯${reset}"
-        fi
-        # End of commands
-        #echo -e "${negrito}${verde}╭─────────────────────────────────────────╮"
-        #echo -e "│ ${italico}Google Earth Pro instalado com sucesso! │"
-        #echo -e "╰─────────────────────────────────────────╯${reset}"
-        sleep ${sleep}
-        ./${fileName}
+        cd Package_Installers/
+        ./Install_Google_Earth_Pro.sh "$sleep" "$fileName"
         ;;
     i5) # Skype para Linux
         clear
