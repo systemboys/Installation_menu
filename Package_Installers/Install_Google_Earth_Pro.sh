@@ -11,7 +11,7 @@ sleep="$1"
 fileName="$2"
 
 # Variáveis úteis
-packageVersionName="google-earth-pro" # Nome do arquivo na instalação para procurar a versão no pacote
+packageVersionName="google-earth-pro-stable" # Nome do arquivo na instalação para procurar a versão no pacote
        packageName="Google Earth Pro" # Apenas o nome do pacote
         characters="────────────────" # Arquivo você coloca os (─), a mesma quantidade de caracteres do packageName=""
 
