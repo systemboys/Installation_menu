@@ -18,7 +18,7 @@ packageVersionName="google-earth-pro-stable" # Nome do arquivo na instalação p
 # Start of commands
 
 # Verificar se o está instalado
-if ! dpkg -1 | grep -q ${packageVersionName}; then
+if [ -x "$(command -v google-earth-pro-stable)" ]; then
     clear
     echo "╭${characters}────────────────────────────────────╮"
     echo "│ ${packageName} não está instalado! Instalando... │"
