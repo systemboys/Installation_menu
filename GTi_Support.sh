@@ -109,6 +109,7 @@ case $option in
         git clone https://github.com/systemboys/Installation_menu.git
         cd Installation_menu
         chmod +x GTi_Support.sh
+        chmod +x Installation_menu/*
         ./GTi_Support.sh
         ;;
     dm) # Deletar o menu
