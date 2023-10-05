@@ -185,31 +185,8 @@ case $option in
         ./Install_Remmina.sh "$sleep" "$fileName"
         ;;
     i7) # Opera
-        clear
-        # Start of commands
-        # Verificar se o Opera está instalado
-        if ! command -v opera &> /dev/null; then
-            echo "Opera não está instalado. Instalando..."
-            sudo apt-get update
-            sudo apt-get install apt-transport-https
-            wget -qO- https://deb.opera.com/archive.key | sudo gpg --dearmor -o /usr/share/keyrings/com.opera-archive-keyring.gpg
-            echo "deb [signed-by=/usr/share/keyrings/com.opera-archive-keyring.gpg] https://deb.opera.com/opera-stable/ stable non-free" | sudo tee /etc/apt/sources.list.d/opera.list
-            sudo apt-get update
-            sudo apt-get install opera-stable
-            echo -e "${negrito}${verde}╭──────────────────────────────╮"
-            echo -e "│ ${italico}Opera instalado com sucesso! │"
-            echo -e "╰──────────────────────────────╯${reset}"
-        else
-            echo -e "${negrito}${verde}╭──────────────────────────╮"
-            echo -e "│ ${italico}Opera já está instalado! │"
-            echo -e "╰──────────────────────────╯${reset}"
-        fi
-        # End of commands
-        #echo -e "${negrito}${verde}╭──────────────────────────╮"
-        #echo -e "│ ${italico}Opera já está instalado! │"
-        #echo -e "╰──────────────────────────╯${reset}"
-        sleep ${sleep}
-        ./${fileName}
+        cd Package_Installers/
+        ./Install_Opera.sh "$sleep" "$fileName"
         ;;
     i8) # FileZilla
         clear
