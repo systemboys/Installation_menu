@@ -207,29 +207,8 @@ case $option in
         ;;
     # Desenvolvimento
     d6) # Git
-        clear
-        # Start of commands
-        # Verificar se o Git está instalado
-        if ! command -v git &> /dev/null; then
-            echo -e "${negrito}${amarelo}╭───────────────────────────────────────╮"
-            echo -e "│ Git não está instalado! Instalando... │"
-            echo -e "╰───────────────────────────────────────╯${reset}"
-            sleep ${sleep}
-            sudo apt update
-            sudo apt install git
-            clear
-            echo -e "${negrito}${verde}╭───────────────────────────╮"
-            echo -e "│ Git instalado com sucesso │"
-            echo -e "╰───────────────────────────╯${reset}"
-            sleep ${sleep}
-        else
-            echo -e "${negrito}${ciano}╭────────────────────────────────────────────────╮"
-            echo -e "│ Git já está instalado. Ignorando a instalação. │"
-            echo -e "╰────────────────────────────────────────────────╯${reset}"
-            sleep ${sleep}
-        fi
-        # End of commands
-        ./${fileName}
+        cd Package_Installers/Development/
+        ./Install_git.sh "$sleep" "$fileName"
         ;;
     *) # Opção inválida
         clear
