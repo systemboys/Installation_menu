@@ -17,8 +17,16 @@ packageName="TigerVNC Viewer" # Apenas o nome do pacote
  characters="───────────────" # Arquivo você coloca os (─), a mesma quantidade de caracteres do packageName=""
 
 # Start of commands
+# Verificar se o Flatpak está instalado
+if ! command -v flatpak &> /dev/null; then
+    echo "Flatpak não está instalado. Instalando..."
+    sudo apt install flatpak
+else
+    echo "Flatpak já está instalado. Ignorando a instalação."
+fi
+# Instalar TigerVNC
 sudo apt update
-sudo apt install tigervnc-standalone-server tigervnc-common
+flatpak --user update org.tigervnc.vncviewer
 
 clear
 echo "╭${characters}─────────────────────────╮"
