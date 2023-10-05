@@ -194,29 +194,8 @@ case $option in
         ./Install_FileZilla.sh "$sleep" "$fileName"
         ;;
     i9) # Discord
-        clear
-        # Start of commands
-        # Verificar se o Discord está instalado
-        if ! dpkg -l | grep -q discord; then
-            echo "Discord não está instalado. Instalando..."
-            sudo wget -O /usr/share/keyrings/discord-archive-keyring.gpg https://discord.com/api/download/keyring
-            echo 'deb [signed-by=/usr/share/keyrings/discord-archive-keyring.gpg] https://packages.discord.com/debian/ stable main' | sudo tee /etc/apt/sources.list.d/discord.list
-            sudo apt update
-            sudo apt install discord
-            echo -e "${negrito}${verde}╭────────────────────────────────╮"
-            echo -e "│ ${italico}Discord instalado com sucesso! │"
-            echo -e "╰────────────────────────────────╯${reset}"
-        else
-            echo -e "${negrito}${verde}╭────────────────────────────╮"
-            echo -e "│ ${italico}Discord já está instalado! │"
-            echo -e "╰────────────────────────────╯${reset}"
-        fi
-        # End of commands
-        #echo -e "${negrito}${verde}╭────────────────────────────────╮"
-        #echo -e "│ ${italico}Remmina instalado com sucesso! │"
-        #echo -e "╰────────────────────────────────╯${reset}"
-        sleep ${sleep}
-        ./${fileName}
+        cd Package_Installers/
+        ./Install_Discord.sh "$sleep" "$fileName"
         ;;
     i20) # Mozilla Firefox
         clear
