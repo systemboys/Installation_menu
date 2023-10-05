@@ -1,5 +1,7 @@
 #!/bin/bash
 
+clear
+
 # Verifica se o número de argumentos é correto
 if [ "$#" -ne 2 ]; then
     echo "Erro: Número incorreto de argumentos."

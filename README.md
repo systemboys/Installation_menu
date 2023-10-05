@@ -106,6 +106,8 @@ Em seguida, crie um novo arquivo `./Package_Installers/Install_Microsoft_Edge.sh
 ```bash
 #!/bin/bash
 
+clear
+
 # Verifica se o número de argumentos é correto
 if [ "$#" -ne 2 ]; then
     echo "Erro: Número incorreto de argumentos."
