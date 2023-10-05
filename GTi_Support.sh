@@ -57,7 +57,7 @@ echo -e "╰──────────────────────�
 echo -e "${verde}╭┤${fundoAzul}${negrito}${italico} Internet ${reset}${verde}├─────────────────────────────────────────────────────────────────────────────────────╮"
 echo -e "│ i1 ► AnyDesk          ░ i2 ► Microsoft Edge ░ i3 ► Google Chrome    ░ i4 ► Google Earth Pro     │"
 echo -e "│ i5 ► Skype para Linux ░ i6 ► Remmina        ░ i7 ► Opera            ░ i8 ► FileZilla            │"
-echo -e "│ i9 ► Discord(err!)    ░ i20 ► Moz. Firefox  ░ i21 ► Visua. TigerVNC ░                           │"
+echo -e "│ i9 ► Discord          ░ i20 ► Moz. Firefox  ░ i21 ► Visua. TigerVNC ░                           │"
 echo -e "╰─────────────────────────────────────────────────────────────────────────────────────────────────╯${reset}"
 echo -e "${amarelo}╭┤${fundoPreto}${negrito}${italico} Desenvolvimento ${reset}${amarelo}├──────────────────────────────────────────────────────────────────────────────╮"
 echo -e "│*d1 ► Beekeeper Studio ░*d2 ► Insommina        ░*d3 ► Visual Studio Code ░*d4 ► NodeJS           │"
@@ -202,16 +202,8 @@ case $option in
         ./Install_Mozilla_Firefox.sh "$sleep" "$fileName"
         ;;
     i21) # Visualizador TigerVNC
-        clear
-        # Start of commands
-        sudo apt update
-        sudo apt install tigervnc-standalone-server tigervnc-common
-        # End of commands
-        echo -e "${negrito}${verde}╭──────────────────────────────────────────────╮"
-        echo -e "│ ${italico}Visualizador TigerVNC instalado com sucesso! │"
-        echo -e "╰──────────────────────────────────────────────╯${reset}"
-        sleep ${sleep}
-        ./${fileName}
+        cd Package_Installers/
+        ./Install_TigerVNC_Viewer.sh "$sleep" "$fileName"
         ;;
     # Desenvolvimento
     d6) # Git
