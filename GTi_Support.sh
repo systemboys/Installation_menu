@@ -189,27 +189,8 @@ case $option in
         ./Install_Opera.sh "$sleep" "$fileName"
         ;;
     i8) # FileZilla
-        clear
-        # Start of commands
-        # Verificar se o FileZilla está instalado
-        if ! command -v filezilla &> /dev/null; then
-            echo "FileZilla não está instalado. Instalando..."
-            sudo apt-get update
-            sudo apt-get install filezilla
-            echo -e "${negrito}${verde}╭──────────────────────────────────╮"
-            echo -e "│ ${italico}FileZilla instalado com sucesso! │"
-            echo -e "╰──────────────────────────────────╯${reset}"
-        else
-            echo -e "${negrito}${verde}╭──────────────────────────────╮"
-            echo -e "│ ${italico}FileZilla já está instalado! │"
-            echo -e "╰──────────────────────────────╯${reset}"
-        fi
-        # End of commands
-        #echo -e "${negrito}${verde}╭──────────────────────────────╮"
-        #echo -e "│ ${italico}FileZilla já está instalado! │"
-        #echo -e "╰──────────────────────────────╯${reset}"
-        sleep ${sleep}
-        ./${fileName}
+        cd Package_Installers/
+        ./Install_FileZilla.sh "$sleep" "$fileName"
         ;;
     i9) # Discord
         clear
