@@ -177,30 +177,8 @@ case $option in
         ./Install_Google_Earth_Pro.sh "$sleep" "$fileName"
         ;;
     i5) # Skype para Linux
-        clear
-        # Start of commands
-        # Atualizar os pacotes
-        apt update
-
-        # Instalar o pacote SkypeForLinux
-        apt install skypeforlinux
-
-        # Verificar se o Skype for Linux está instalado
-        if ! command -v skypeforlinux &> /dev/null; then
-            echo "╭────────────────────────────────────────────────────────────────╮"
-            echo "│ ️️⚠️  Ocorreu algum problema, Skype para Linux não foi instalado! │"
-            echo "╰────────────────────────────────────────────────────────────────╯"
-        else
-            echo -e "${negrito}${verde}╭─────────────────────────────────────────╮"
-            echo -e "│ ${italico}Skype para Linux instalado com sucesso! │"
-            echo -e "╰─────────────────────────────────────────╯${reset}"
-        fi
-        # End of commands
-        #echo -e "${negrito}${verde}╭─────────────────────────────────────────╮"
-        #echo -e "│ ${italico}Skype para Linux instalado com sucesso! │"
-        #echo -e "╰─────────────────────────────────────────╯${reset}"
-        sleep ${sleep}
-        ./${fileName}
+        cd Package_Installers/
+        ./Install_Skype_for_Linux.sh "$sleep" "$fileName"
         ;;
     i6) # Remmina
         clear
