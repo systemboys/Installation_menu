@@ -52,5 +52,5 @@ fi
 # End of commands
 
 sleep ${sleep}
-cd ../../
+cd ../..
 ./${fileName}

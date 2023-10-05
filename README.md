@@ -100,8 +100,8 @@ Para incrementar um novo item, edite o arquivo `./GTi_Support.sh` e adicione a n
 
 ```bash
     i7) # Microsoft Edge
-        cd Package_Installers/
-        ./Internet/Install_Microsoft_Edge.sh "$sleep" "$fileName"
+        cd Package_Installers/Internet/
+        ./Install_Microsoft_Edge.sh "$sleep" "$fileName"
         ;;
 ```
 

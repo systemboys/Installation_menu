@@ -162,48 +162,48 @@ case $option in
         ;;
     # Internet
     i1) # AnyDesk
-        cd Package_Installers/
-        ./Internet/Install_AnyDesk.sh "$sleep" "$fileName"
+        cd Package_Installers/Internet/
+        ./Install_AnyDesk.sh "$sleep" "$fileName"
         ;;
     i2) # Microsoft Edge
-        cd Package_Installers/
-        ./Internet/Install_Microsoft_Edge.sh "$sleep" "$fileName"
+        cd Package_Installers/Internet/
+        ./Install_Microsoft_Edge.sh "$sleep" "$fileName"
         ;;
     i3) # Google Chrome
-        cd Package_Installers/
-        ./Internet/Install_Google_Chrome.sh "$sleep" "$fileName"
+        cd Package_Installers/Internet/
+        ./Install_Google_Chrome.sh "$sleep" "$fileName"
         ;;
     i4) # Google Earth Pro
-        cd Package_Installers/
-        ./Internet/Install_Google_Earth_Pro.sh "$sleep" "$fileName"
+        cd Package_Installers/Internet/
+        ./Install_Google_Earth_Pro.sh "$sleep" "$fileName"
         ;;
     i5) # Skype para Linux
-        cd Package_Installers/
-        ./Internet/Install_Skype_for_Linux.sh "$sleep" "$fileName"
+        cd Package_Installers/Internet/
+        ./Install_Skype_for_Linux.sh "$sleep" "$fileName"
         ;;
     i6) # Remmina
-        cd Package_Installers/
-        ./Internet/Install_Remmina.sh "$sleep" "$fileName"
+        cd Package_Installers/Internet/
+        ./Install_Remmina.sh "$sleep" "$fileName"
         ;;
     i7) # Opera
-        cd Package_Installers/
-        ./Internet/Install_Opera.sh "$sleep" "$fileName"
+        cd Package_Installers/Internet/
+        ./Install_Opera.sh "$sleep" "$fileName"
         ;;
     i8) # FileZilla
-        cd Package_Installers/
-        ./Internet/Install_FileZilla.sh "$sleep" "$fileName"
+        cd Package_Installers/Internet/
+        ./Install_FileZilla.sh "$sleep" "$fileName"
         ;;
     i9) # Discord
-        cd Package_Installers/
-        ./Internet/Install_Discord.sh "$sleep" "$fileName"
+        cd Package_Installers/Internet/
+        ./Install_Discord.sh "$sleep" "$fileName"
         ;;
     i20) # Mozilla Firefox
-        cd Package_Installers/
-        ./Internet/Install_Mozilla_Firefox.sh "$sleep" "$fileName"
+        cd Package_Installers/Internet/
+        ./Install_Mozilla_Firefox.sh "$sleep" "$fileName"
         ;;
     i21) # Visualizador TigerVNC
-        cd Package_Installers/
-        ./Internet/Install_TigerVNC_Viewer.sh "$sleep" "$fileName"
+        cd Package_Installers/Internet/
+        ./Install_TigerVNC_Viewer.sh "$sleep" "$fileName"
         ;;
     # Desenvolvimento
     d6) # Git
