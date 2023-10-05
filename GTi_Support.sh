@@ -181,28 +181,8 @@ case $option in
         ./Install_Skype_for_Linux.sh "$sleep" "$fileName"
         ;;
     i6) # Remmina
-        clear
-        # Start of commands
-        # Verificar se o Remmina está instalado
-        if ! command -v remmina &> /dev/null; then
-            echo "Remmina não está instalado. Instalando..."
-            sudo apt-get update
-            sudo apt-get install remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-spice remmina-plugin-vnc
-            sudo dnf install remmina remmina-plugins-rdp remmina-plugins-secret remmina-plugins-spice remmina-plugins-vnc
-            echo -e "${negrito}${verde}╭────────────────────────────────╮"
-            echo -e "│ ${italico}Remmina instalado com sucesso! │"
-            echo -e "╰────────────────────────────────╯${reset}"
-        else
-            echo -e "${negrito}${verde}╭────────────────────────────╮"
-            echo -e "│ ${italico} Remmina já está instalado! │"
-            echo -e "╰────────────────────────────╯${reset}"
-        fi
-        # End of commands
-        #echo -e "${negrito}${verde}╭────────────────────────────╮"
-        #echo -e "│ ${italico} Remmina já está instalado! │"
-        #echo -e "╰────────────────────────────╯${reset}"
-        sleep ${sleep}
-        ./${fileName}
+        cd Package_Installers/
+        ./Install_Remmina.sh "$sleep" "$fileName"
         ;;
     i7) # Opera
         clear
