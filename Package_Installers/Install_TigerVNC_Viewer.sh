@@ -26,7 +26,8 @@ else
 fi
 # Instalar TigerVNC
 sudo apt update
-flatpak --user update org.tigervnc.vncviewer
+flatpak install flathub org.tigervnc.vncviewer
+flatpak run org.tigervnc.vncviewer
 
 clear
 echo "╭${characters}─────────────────────────╮"
