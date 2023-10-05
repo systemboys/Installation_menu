@@ -13,9 +13,9 @@ sleep="$1"
 fileName="$2"
 
 # Variáveis úteis
-packageVersionName="remmina" # Nome do arquivo na instalação para procurar a versão no pacote
-       packageName="Remmina" # Apenas o nome do pacote
-        characters="───────" # Arquivo você coloca os (─), a mesma quantidade de caracteres do packageName=""
+packageVersionName="opera" # Nome do arquivo na instalação para procurar a versão no pacote
+       packageName="Opera" # Apenas o nome do pacote
+        characters="─────" # Arquivo você coloca os (─), a mesma quantidade de caracteres do packageName=""
 
 # Start of commands
 
@@ -26,9 +26,12 @@ if ! command -v ${packageVersionName} &> /dev/null; then
     echo "│ ${packageName} não está instalado! Instalando... │"
     echo "╰${characters}────────────────────────────────────╯"
 
-    apt-get update
-    apt-get install remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-spice remmina-plugin-vnc
-    dnf install remmina remmina-plugins-rdp remmina-plugins-secret remmina-plugins-spice remmina-plugins-vnc
+    sudo apt-get update
+    sudo apt-get install apt-transport-https
+    wget -qO- https://deb.opera.com/archive.key | sudo gpg --dearmor -o /usr/share/keyrings/com.opera-archive-keyring.gpg
+    echo "deb [signed-by=/usr/share/keyrings/com.opera-archive-keyring.gpg] https://deb.opera.com/opera-stable/ stable non-free" | sudo tee /etc/apt/sources.list.d/opera.list
+    sudo apt-get update
+    sudo apt-get install opera-stable
 
     clear
     echo "╭${characters}─────────────────────────╮"
@@ -44,5 +47,5 @@ fi
 # End of commands
 
 sleep ${sleep}
-cd ..
+cd ../..
 ./${fileName}

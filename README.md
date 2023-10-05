@@ -63,9 +63,13 @@ Este Menu contêm scripts de instalação de pacotes de software dentro do diret
 ├─ /Imagens
 │    └─ Installation_menu.png
 ├─ /Package_Installers
-│    ├─ Install_Package1.sh
-│    ├─ Install_Package2.sh
-│    ├─ Install_Package3.sh
+│    ├─ /Internet
+│    │    ├─ Install_Package1.sh
+│    │    ├─ Install_Package2.sh
+│    │    ├─ Install_Package3.sh
+│    │    └─ ...
+│    ├─ /Desenvolvimento
+│    │    └─ ...
 │    └─ ...
 ├─ GTi_Support.sh
 └─ README.md
@@ -97,11 +101,11 @@ Para incrementar um novo item, edite o arquivo `./GTi_Support.sh` e adicione a n
 ```bash
     i7) # Microsoft Edge
         cd Package_Installers/
-        ./Install_Microsoft_Edge.sh "$sleep" "$fileName"
+        ./Internet/Install_Microsoft_Edge.sh "$sleep" "$fileName"
         ;;
 ```
 
-Em seguida, crie um novo arquivo `./Package_Installers/Install_Microsoft_Edge.sh` com o seguinte script:
+Em seguida, crie um novo arquivo `./Package_Installers/Internet/Install_Microsoft_Edge.sh` com o seguinte script:
 
 ```bash
 #!/bin/bash
@@ -148,7 +152,7 @@ fi
 # End of commands
 
 sleep ${sleep}
-cd ..
+cd ../..
 ./${fileName}
 ```
 

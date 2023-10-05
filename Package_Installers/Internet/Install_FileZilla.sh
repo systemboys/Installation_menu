@@ -13,29 +13,23 @@ sleep="$1"
 fileName="$2"
 
 # Variáveis úteis
-packageVersionName="google-earth-pro-stable" # Nome do arquivo na instalação para procurar a versão no pacote
-       packageName="Google Earth Pro" # Apenas o nome do pacote
-        characters="────────────────" # Arquivo você coloca os (─), a mesma quantidade de caracteres do packageName=""
+packageVersionName="filezilla" # Nome do arquivo na instalação para procurar a versão no pacote
+       packageName="FileZilla" # Apenas o nome do pacote
+        characters="─────────" # Arquivo você coloca os (─), a mesma quantidade de caracteres do packageName=""
 
 # Start of commands
 
 # Verificar se o está instalado
-if ! [ -x "$(command -v google-earth-pro)" ]; then
+if ! command -v ${packageVersionName} &> /dev/null; then
     clear
     echo "╭${characters}────────────────────────────────────╮"
     echo "│ ${packageName} não está instalado! Instalando... │"
     echo "╰${characters}────────────────────────────────────╯"
 
-    # Baixar o pacote
-    wget https://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
+    sudo apt-get update
+    sudo apt-get install filezilla
 
-    # Instalar o pacote
-    sudo dpkg -i google-earth-pro-stable_current_amd64.deb
-
-    # Dar permissões e apagar o arquivo
-    chmod 777 google-earth-pro-stable_current_amd64.deb && rm -r google-earth-pro-stable_current_amd64.deb
-
-    # clear
+    clear
     echo "╭${characters}─────────────────────────╮"
     echo "│ ${packageName} instalado com sucesso! │"
     echo "╰${characters}─────────────────────────╯"
@@ -49,5 +43,5 @@ fi
 # End of commands
 
 sleep ${sleep}
-cd ..
+cd ../..
 ./${fileName}

@@ -13,9 +13,9 @@ sleep="$1"
 fileName="$2"
 
 # Variáveis úteis
-packageVersionName="opera" # Nome do arquivo na instalação para procurar a versão no pacote
-       packageName="Opera" # Apenas o nome do pacote
-        characters="─────" # Arquivo você coloca os (─), a mesma quantidade de caracteres do packageName=""
+packageVersionName="discord" # Nome do arquivo na instalação para procurar a versão no pacote
+       packageName="Discord" # Apenas o nome do pacote
+        characters="───────" # Arquivo você coloca os (─), a mesma quantidade de caracteres do packageName=""
 
 # Start of commands
 
@@ -26,12 +26,10 @@ if ! command -v ${packageVersionName} &> /dev/null; then
     echo "│ ${packageName} não está instalado! Instalando... │"
     echo "╰${characters}────────────────────────────────────╯"
 
-    sudo apt-get update
-    sudo apt-get install apt-transport-https
-    wget -qO- https://deb.opera.com/archive.key | sudo gpg --dearmor -o /usr/share/keyrings/com.opera-archive-keyring.gpg
-    echo "deb [signed-by=/usr/share/keyrings/com.opera-archive-keyring.gpg] https://deb.opera.com/opera-stable/ stable non-free" | sudo tee /etc/apt/sources.list.d/opera.list
-    sudo apt-get update
-    sudo apt-get install opera-stable
+    sudo wget -O /usr/share/keyrings/discord-archive-keyring.gpg https://discord.com/api/download/keyring
+    echo 'deb [signed-by=/usr/share/keyrings/discord-archive-keyring.gpg] https://packages.discord.com/debian/ stable main' | sudo tee /etc/apt/sources.list.d/discord.list
+    sudo apt update
+    sudo apt install discord
 
     clear
     echo "╭${characters}─────────────────────────╮"
@@ -47,5 +45,5 @@ fi
 # End of commands
 
 sleep ${sleep}
-cd ..
+cd ../..
 ./${fileName}

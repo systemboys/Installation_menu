@@ -13,9 +13,9 @@ sleep="$1"
 fileName="$2"
 
 # Variáveis úteis
-packageVersionName="skypeforlinux" # Nome do arquivo na instalação para procurar a versão no pacote
-       packageName="Skype para Linux" # Apenas o nome do pacote
-        characters="────────────────" # Arquivo você coloca os (─), a mesma quantidade de caracteres do packageName=""
+packageVersionName="remmina" # Nome do arquivo na instalação para procurar a versão no pacote
+       packageName="Remmina" # Apenas o nome do pacote
+        characters="───────" # Arquivo você coloca os (─), a mesma quantidade de caracteres do packageName=""
 
 # Start of commands
 
@@ -26,11 +26,9 @@ if ! command -v ${packageVersionName} &> /dev/null; then
     echo "│ ${packageName} não está instalado! Instalando... │"
     echo "╰${characters}────────────────────────────────────╯"
 
-    # Atualizar os pacotes
-    apt update
-
-    # Instalar o pacote SkypeForLinux
-    apt install skypeforlinux
+    apt-get update
+    apt-get install remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-spice remmina-plugin-vnc
+    dnf install remmina remmina-plugins-rdp remmina-plugins-secret remmina-plugins-spice remmina-plugins-vnc
 
     clear
     echo "╭${characters}─────────────────────────╮"
@@ -46,5 +44,5 @@ fi
 # End of commands
 
 sleep ${sleep}
-cd ..
+cd ../..
 ./${fileName}

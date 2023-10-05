@@ -13,9 +13,9 @@ sleep="$1"
 fileName="$2"
 
 # Variáveis úteis
-packageVersionName="filezilla" # Nome do arquivo na instalação para procurar a versão no pacote
-       packageName="FileZilla" # Apenas o nome do pacote
-        characters="─────────" # Arquivo você coloca os (─), a mesma quantidade de caracteres do packageName=""
+packageVersionName="anydesk" # Nome do arquivo na instalação para procurar a versão no pacote
+       packageName="AnyDesk" # Apenas o nome do pacote
+        characters="───────" # Arquivo você coloca os (─), a mesma quantidade de caracteres do packageName=""
 
 # Start of commands
 
@@ -26,8 +26,17 @@ if ! command -v ${packageVersionName} &> /dev/null; then
     echo "│ ${packageName} não está instalado! Instalando... │"
     echo "╰${characters}────────────────────────────────────╯"
 
-    sudo apt-get update
-    sudo apt-get install filezilla
+    # Adicionar a chave GPG
+    wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
+
+    # Adicionar o repositório
+    echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list
+
+    # Atualizar os pacotes
+    sudo apt update
+
+    # Instalar o AnyDesk
+    sudo apt install anydesk
 
     clear
     echo "╭${characters}─────────────────────────╮"
@@ -43,5 +52,5 @@ fi
 # End of commands
 
 sleep ${sleep}
-cd ..
+cd ../..
 ./${fileName}
