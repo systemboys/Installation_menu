@@ -61,7 +61,7 @@ echo -e "│ i9 ► Discord          ░ i20 ► Moz. Firefox  ░ i21 ► Visua
 echo -e "╰─────────────────────────────────────────────────────────────────────────────────────────────────╯${reset}"
 echo -e "${amarelo}╭┤${fundoPreto}${negrito}${italico} Desenvolvimento ${reset}${amarelo}├──────────────────────────────────────────────────────────────────────────────╮"
 echo -e "│*d1 ► Beekeeper Studio ░*d2 ► Insommina        ░*d3 ► Visual Studio Code ░*d4 ► NodeJS           │"
-echo -e "│*d5 ► Docker Conteiner ░ d6 ► Git              ░                         ░                       │"
+echo -e "│*d5 ► Docker Conteiner ░ d6 ► Git              ░ d7 ► Typora             ░                       │"
 echo -e "╰─────────────────────────────────────────────────────────────────────────────────────────────────╯${reset}"
 
 read -p "${fileName}: Digite uma opção: " option
@@ -209,6 +209,10 @@ case $option in
     d6) # Git
         cd Package_Installers/Development/
         ./Install_git.sh "$sleep" "$fileName"
+        ;;
+    d7) # Typora
+        cd Package_Installers/Development/
+        ./Install_Typora.sh "$sleep" "$fileName"
         ;;
     *) # Opção inválida
         clear
