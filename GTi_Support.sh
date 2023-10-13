@@ -43,6 +43,111 @@ piscando='\033[5m'
 invertido='\033[7m'
 escondido='\033[8m'
 
+# Sair do Menu
+exitTheMenu() {
+    clear
+    echo "╭────────────────────╮"
+    echo "│ Você saiu do menu! │"
+    echo "╰────────────────────╯"
+    exit 0
+}
+# Desligar Linux
+restartLinux() {
+    clear
+    echo -e "${vermelho}╭────────────────────────╮${reset}"
+    echo -e "${vermelho}│ ${piscando}${negrito}Reiniciando o Linux...${reset} ${vermelho}│${reset}"
+    echo -e "${vermelho}╰────────────────────────╯${reset}"
+    sleep ${sleep}
+    sudo reboot
+}
+# Reiniciar Linux
+shutdownLinux() {
+    clear
+    echo -e "${vermelho}╭───────────────────────╮${reset}"
+    echo -e "${vermelho}│ ${piscando}${negrito}Desligando o Linux...${reset} ${vermelho}│${reset}"
+    echo -e "${vermelho}╰───────────────────────╯${reset}"
+    sleep ${sleep}
+    sudo poweroff
+}
+# Atualizar Menu
+updateMenu() {
+    clear
+    echo -e "${vermelho}╭───────────────────────╮${reset}"
+    echo -e "${vermelho}│ ${piscando}${negrito}Atualizando o Menu...${reset} ${vermelho}│${reset}"
+    echo -e "${vermelho}╰───────────────────────╯${reset}"
+    sleep ${sleep}
+    # Verificar se o Git está instalado
+    if ! command -v git &> /dev/null; then
+        echo "Git não está instalado. Instalando..."
+        sudo apt install git
+    else
+        echo "Git já está instalado. Ignorando a instalação."
+    fi
+    cd ..
+    rm -rf Installation_menu
+    git clone https://github.com/systemboys/Installation_menu.git
+    cd Installation_menu
+    chmod +x GTi_Support.sh
+    chmod +x Installation_menu/*
+    ./GTi_Support.sh
+}
+# Deletar Menu
+deleteMenu() {
+    clear
+    cd ..
+    echo -e "${vermelho}╭─────────────────────╮${reset}"
+    echo -e "${vermelho}│ ${piscando}${negrito}Deletando o Menu...${reset} ${vermelho}│${reset}"
+    echo -e "${vermelho}╰─────────────────────╯${reset}"
+    sleep ${sleep}
+    rm -rf Installation_menu && clear
+    echo -e "${verde}╭────────────────────────────╮${reset}"
+    echo -e "${verde}│ ${piscando}${negrito}Menu deletado com sucesso!${reset} ${verde}│${reset}"
+    echo -e "${verde}╰────────────────────────────╯${reset}"
+}
+# Atualizar Pacotes Linux
+updateLinuxPackages() {
+    clear
+    # Start of commands
+    echo -e "${amarelo}╭───────────────────────────────╮${reset}"
+    echo -e "${amarelo}│ ${piscando}${negrito}Atualizando os pacotes Linux!${reset} ${amarelo}│${reset}"
+    echo -e "${amarelo}╰───────────────────────────────╯${reset}"
+    sleep ${sleep}
+    apt update
+    clear
+    # End of commands
+    echo -e "${verde}╭────────────────────────────────────────╮${reset}"
+    echo -e "${verde}│ ${negrito}Pacotes Linux atualizados com sucesso!${reset} ${verde}│${reset}"
+    echo -e "${verde}╰────────────────────────────────────────╯${reset}"
+    sleep ${sleep}
+    ./${fileName}
+}
+# Atualizar Kernel Linux
+updateLinuxKernel() {
+    clear
+    # Start of commands
+    echo -e "${amarelo}╭────────────────────────────────╮${reset}"
+    echo -e "${amarelo}│ ${piscando}${negrito}Atualizando o Kernel do Linux!${reset} ${amarelo}│${reset}"
+    echo -e "${amarelo}╰────────────────────────────────╯${reset}"
+    sleep ${sleep}
+    apt update && apt upgrade -y
+    clear
+    # End of commands
+    echo -e "${verde}╭──────────────────────────────────────────╮${reset}"
+    echo -e "${verde}│ ${negrito}Kernel do Linux atualizados com sucesso!${reset} ${verde}│${reset}"
+    echo -e "${verde}╰──────────────────────────────────────────╯${reset}"
+    sleep ${sleep}
+    ./${fileName}
+}
+# Opção inválida
+invalidOption() {
+    clear
+    echo -e "${vermelho}╭──────────────────────────────────╮${reset}"
+    echo -e "${vermelho}│ ${piscando}${negrito}Opção inválida! Tente novamente.${reset} ${vermelho}│${reset}"
+    echo -e "${vermelho}╰──────────────────────────────────╯${reset}"
+    sleep ${sleep}
+    ./${fileName}
+}
+
 echo -e "╭─────────────────────────────────────────────────────────────────────────╮"
 echo -e "│${fundoRoxo}${italico}${brancoNegrito}       Menu de Instalação Linux: Simplificando a Gestão de Pacotes       ${reset}│ ${roxo}░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓${reset}${vermelho}▒▓▓▓${reset}"
 echo -e "│ Explore nosso menu intuitivo no terminal Linux para instalar pacotes    │"
@@ -69,92 +174,25 @@ read -p "${fileName}: Digite uma opção: " option
 case $option in
     # Menu o Linux
     q) # Sair do menu
-        clear
-        echo "╭────────────────────╮"
-        echo "│ Você saiu do menu! │"
-        echo "╰────────────────────╯"
-        exit 0
+        exitTheMenu
         ;;
     r) # Reiniciar o Linux
-        clear
-        echo -e "${vermelho}╭────────────────────────╮${reset}"
-        echo -e "${vermelho}│ ${piscando}${negrito}Reiniciando o Linux...${reset} ${vermelho}│${reset}"
-        echo -e "${vermelho}╰────────────────────────╯${reset}"
-        sleep ${sleep}
-        sudo reboot
+        restartLinux
         ;;
     s) # Desligar o Linux
-        clear
-        echo -e "${vermelho}╭───────────────────────╮${reset}"
-        echo -e "${vermelho}│ ${piscando}${negrito}Desligando o Linux...${reset} ${vermelho}│${reset}"
-        echo -e "${vermelho}╰───────────────────────╯${reset}"
-        sleep ${sleep}
-        sudo poweroff
+        shutdownLinux
         ;;
     udm) # Atualizar o menu
-        clear
-        echo -e "${vermelho}╭───────────────────────╮${reset}"
-        echo -e "${vermelho}│ ${piscando}${negrito}Atualizando o Menu...${reset} ${vermelho}│${reset}"
-        echo -e "${vermelho}╰───────────────────────╯${reset}"
-        sleep ${sleep}
-        # Verificar se o Git está instalado
-        if ! command -v git &> /dev/null; then
-            echo "Git não está instalado. Instalando..."
-            sudo apt install git
-        else
-            echo "Git já está instalado. Ignorando a instalação."
-        fi
-        cd ..
-        rm -rf Installation_menu
-        git clone https://github.com/systemboys/Installation_menu.git
-        cd Installation_menu
-        chmod +x GTi_Support.sh
-        chmod +x Installation_menu/*
-        ./GTi_Support.sh
+        updateMenu
         ;;
     dm) # Deletar o menu
-        clear
-        cd ..
-        echo -e "${vermelho}╭─────────────────────╮${reset}"
-        echo -e "${vermelho}│ ${piscando}${negrito}Deletando o Menu...${reset} ${vermelho}│${reset}"
-        echo -e "${vermelho}╰─────────────────────╯${reset}"
-        sleep ${sleep}
-        rm -rf Installation_menu && clear
-        echo -e "${verde}╭────────────────────────────╮${reset}"
-        echo -e "${verde}│ ${piscando}${negrito}Menu deletado com sucesso!${reset} ${verde}│${reset}"
-        echo -e "${verde}╰────────────────────────────╯${reset}"
+        deleteMenu
         ;;
     udl) # Update (atualizar pacotes do Linux)
-        clear
-        # Start of commands
-        echo -e "${amarelo}╭───────────────────────────────╮${reset}"
-        echo -e "${amarelo}│ ${piscando}${negrito}Atualizando os pacotes Linux!${reset} ${amarelo}│${reset}"
-        echo -e "${amarelo}╰───────────────────────────────╯${reset}"
-        sleep ${sleep}
-        apt update
-        clear
-        # End of commands
-        echo -e "${verde}╭────────────────────────────────────────╮${reset}"
-        echo -e "${verde}│ ${negrito}Pacotes Linux atualizados com sucesso!${reset} ${verde}│${reset}"
-        echo -e "${verde}╰────────────────────────────────────────╯${reset}"
-        sleep ${sleep}
-        ./${fileName}
+        updateLinuxPackages
         ;;
     ugl) # Upgrade (atualizar o Kernel do Linux)
-        clear
-        # Start of commands
-        echo -e "${amarelo}╭────────────────────────────────╮${reset}"
-        echo -e "${amarelo}│ ${piscando}${negrito}Atualizando o Kernel do Linux!${reset} ${amarelo}│${reset}"
-        echo -e "${amarelo}╰────────────────────────────────╯${reset}"
-        sleep ${sleep}
-        apt update && apt upgrade -y
-        clear
-        # End of commands
-        echo -e "${verde}╭──────────────────────────────────────────╮${reset}"
-        echo -e "${verde}│ ${negrito}Kernel do Linux atualizados com sucesso!${reset} ${verde}│${reset}"
-        echo -e "${verde}╰──────────────────────────────────────────╯${reset}"
-        sleep ${sleep}
-        ./${fileName}
+        updateLinuxKernel
         ;;
     0) # Recarregar menu
         clear
@@ -215,11 +253,6 @@ case $option in
         ./Install_Typora.sh "$sleep" "$fileName"
         ;;
     *) # Opção inválida
-        clear
-        echo -e "${vermelho}╭──────────────────────────────────╮${reset}"
-        echo -e "${vermelho}│ ${piscando}${negrito}Opção inválida! Tente novamente.${reset} ${vermelho}│${reset}"
-        echo -e "${vermelho}╰──────────────────────────────────╯${reset}"
-        sleep ${sleep}
-        ./${fileName}
+        invalidOption
         ;;
 esac
