@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+
 # GTi_Support.sh - Executa o menu de instalações de pacotes e outros
 # comandos Linux.
 #
