@@ -1,14 +1,15 @@
 #!/bin/bash
 #
-# docker-control.sh - Executa o menu Docker Control.
+# GTi_Support.sh - Executa o menu de instalações de pacotes e outros
+# comandos Linux.
 #
-# URL: https://github.com/systemboys/GTi_SiS_Float_Away_6_dev.git
+# URL: https://github.com/systemboys/Installation_menu.git
 # Autor: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
 # Manutenção: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
 #
 # ---------------------------------------------------------------
-# Este programa tem a finadade de facilitar na construção Docker
-# Conteiners e levantar as aplicações no projeto envolvido.
+# Este programa tem a finadade de agilizar nas instalações de
+# pacotes e comandos Linux.
 # ---------------------------------------------------------------
 # Histórico:
 # v1.0 2023-09-30 às 19h30, Marcos Aurélio:
