@@ -1,4 +1,25 @@
 #!/bin/bash
+#
+# docker-control.sh - Executa o menu Docker Control.
+#
+# URL: https://github.com/systemboys/GTi_SiS_Float_Away_6_dev.git
+# Autor: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
+# Manutenção: Marcos Aurélio R. da Silva <systemboys@hotmail.com>
+#
+# ---------------------------------------------------------------
+# Este programa tem a finadade de facilitar na construção Docker
+# Conteiners e levantar as aplicações no projeto envolvido.
+# ---------------------------------------------------------------
+# Histórico:
+# v1.0 2023-09-30 às 19h30, Marcos Aurélio:
+#   - Versão inicial, menu de controle de instalações de pacotes e outros
+#     comandos para sistemas Linux.
+# v1.1 2023-10-01 às 07h30, Marcos Aurélio:
+#   - Testes de instalações de pacotes e alguns comandos Linux.
+# v1.2 2023-10-02 às 21h15, Marcos Aurélio:
+#   - Alguns ajustes nas linhas de comandos, para melhora o entendimento.
+#
+# Licença: GPL.
 
 clear
 
